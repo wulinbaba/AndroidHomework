@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/照片弹出框"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        >
+        <Button
+            android:id="@+id/拍照"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/拍照"/>
+        <Button
+            android:id="@+id/相册选取"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/相册选择"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/拍照"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+        <View
+            android:id="@+id/分割"
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:layout_below="@id/相册选取"
+            />
+        <Button
+            android:id="@+id/取消"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/取消"
+            android:layout_below="@id/分割"/>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

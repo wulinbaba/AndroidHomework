@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:weightSum="1">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="0,3"
+        android:shrinkColumns="1">
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="5dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/物品"
+                android:textSize="20sp" />
+
+            <EditText
+                android:layout_width="260dp"
+                android:layout_height="40dp" />
+
+            <TextView
+                android:layout_width="5dp"
+                android:layout_height="wrap_content" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/数量"
+                android:textSize="20sp"
+                android:inputType="number"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="40dp" />
+
+            <TextView />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/描述"
+                android:textSize="20sp" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="40dp" />
+
+            <TextView />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/售价"
+                android:textSize="20sp" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:inputType="number" />
+
+            <TextView />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/原价"
+                android:textSize="20sp" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:inputType="number" />
+
+            <TextView />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/联系"
+                android:textSize="20sp"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:inputType="number" />
+
+            <TextView />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/分类"
+                android:textSize="20sp" />
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:entries="@array/classification">
+            </Spinner>
+
+
+            <TextView />
+        </TableRow>
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="50dp">
+            <TableRow>
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/照片"
+                    android:textSize="20sp"
+                    />
+
+                <Button
+                    android:id="@+id/点击选取"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:text="@string/点击选取"
+                    android:textSize="10sp" />
+            </TableRow>
+
+
+        </TableLayout>
+
+        <TableRow>
+
+            <ImageView
+                android:id="@+id/img_发布"
+                android:layout_width="500px"
+                android:layout_height="400px"
+                android:layout_span="4"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_launcher" />
+        </TableRow>
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/button"
+                android:layout_span="4"
+                android:text="@string/发布"
+                android:textSize="17sp"
+                android:background="@color/bl"
+                android:textColor="@color/wht"/>
+
+            <TextView />
+        </TableRow>
+    </TableLayout>
+
+    <LinearLayout
+        android:id="@+id/tab_menu"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:id="@+id/txt_home"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/tab_menu_bg"
+
+            android:drawableTop="@drawable/tab_menu_home"
+            android:gravity="center"
+            android:textColor="@drawable/tab_menu_home_text"
+            android:text="首页"/>
+
+        <TextView
+            android:id="@+id/txt_post"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/tab_menu_bg"
+
+            android:drawableTop="@drawable/tab_menu_post"
+            android:gravity="center"
+            android:textColor="@drawable/tab_menu_post_text"
+            android:text="发布"/>
+
+
+        <TextView
+            android:id="@+id/txt_dialog"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/tab_menu_bg"
+
+            android:drawableTop="@drawable/tab_menu_dialog"
+            android:gravity="center"
+            android:textColor="@drawable/tab_menu_dialog_text"
+            android:text="消息"/>
+
+        <TextView
+            android:id="@+id/txt_user"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/tab_menu_bg"
+
+            android:drawableTop="@drawable/tab_menu_user"
+            android:gravity="center"
+            android:textColor="@drawable/tab_menu_user_text"
+            android:text="用户"/>
+    </LinearLayout>
+
+</RelativeLayout>
