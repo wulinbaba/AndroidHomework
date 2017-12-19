@@ -100,18 +100,24 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.txt_post:
 
                 tabPost.setSelected(true);
-                startActivityForResult(new Intent(HomeActivity.this, AnnounceActivity.class),1);
+                Intent intent2 = new Intent(HomeActivity.this, AnnounceActivity.class);
+                intent2.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+                startActivity(intent2);
                 selected2();
                 break;
 
             case R.id.txt_dialog:
                 tabDialog.setSelected(true);
-                startActivityForResult(new Intent(HomeActivity.this, DialogActivity.class),1);
+                Intent intent3 = new Intent(HomeActivity.this, DialogActivity.class);
+                intent3.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+                startActivity(intent3);
                 selected2();
                 break;
 
             case R.id.txt_user:
-                startActivityForResult(new Intent(HomeActivity.this, UserActivity.class),1);
+                Intent intent4 = new Intent(HomeActivity.this, UserActivity.class);
+                intent4.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+                startActivity(intent4);
                 tabUser.setSelected(true);
                 selected2();
 

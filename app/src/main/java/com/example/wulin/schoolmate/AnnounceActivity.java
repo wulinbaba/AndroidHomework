@@ -38,7 +38,9 @@ public class AnnounceActivity extends Activity implements View.OnClickListener {
             case R.id.txt_home:
                 selected2();
                 //tabHome.setSelected(true);
-                startActivityForResult(new Intent(AnnounceActivity.this, HomeActivity.class),1);
+                Intent intent = new Intent(AnnounceActivity.this, HomeActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+                startActivity(intent);
                 break;
 
             case R.id.txt_post:
@@ -50,12 +52,16 @@ public class AnnounceActivity extends Activity implements View.OnClickListener {
             case R.id.txt_dialog:
                 selected2();
                 //tabDialog.setSelected(true);
-                startActivityForResult(new Intent(AnnounceActivity.this, DialogActivity.class),1);
+                Intent intent2 = new Intent(AnnounceActivity.this, DialogActivity.class);
+                intent2.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+                startActivity(intent2);
                 break;
 
             case R.id.txt_user:
                 selected2();
-                startActivityForResult(new Intent(AnnounceActivity.this, UserActivity.class),1);
+                Intent intent3 = new Intent(AnnounceActivity.this, UserActivity.class);
+                intent3.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+                startActivity(intent3);
                 //tabUser.setSelected(true);
                 break;
 

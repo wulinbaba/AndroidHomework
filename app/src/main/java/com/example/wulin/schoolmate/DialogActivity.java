@@ -56,13 +56,18 @@ public class DialogActivity extends AppCompatActivity  implements View.OnClickLi
             case R.id.txt_home:
                 selected2();
                 //tabHome.setSelected(true);
-                startActivityForResult(new Intent(DialogActivity.this, HomeActivity.class),1);
+
+                Intent intent = new Intent(DialogActivity.this, HomeActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+                startActivity(intent);
                 break;
 
             case R.id.txt_post:
                 selected2();
                 //tabPost.setSelected(true);
-                startActivityForResult(new Intent(DialogActivity.this, AnnounceActivity.class),1);
+                Intent intent2 = new Intent(DialogActivity.this, AnnounceActivity.class);
+                intent2.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+                startActivity(intent2);
                 break;
 
             case R.id.txt_dialog:
@@ -73,7 +78,9 @@ public class DialogActivity extends AppCompatActivity  implements View.OnClickLi
 
             case R.id.txt_user:
                 selected2();
-                startActivityForResult(new Intent(DialogActivity.this, UserActivity.class),1);
+                Intent intent3 = new Intent(DialogActivity.this, UserActivity.class);
+                intent3.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+                startActivity(intent3);
                 //tabUser.setSelected(true);
         }
     }

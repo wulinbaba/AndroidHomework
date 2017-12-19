@@ -13,6 +13,8 @@ public class LoginActivity extends AppCompatActivity {
     private EditText accountEdit;
     private EditText passwordEdit;
     private Button login;
+    private Button register;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +23,8 @@ public class LoginActivity extends AppCompatActivity {
         accountEdit = (EditText) findViewById(R.id.account);
         passwordEdit = (EditText) findViewById(R.id.password);
         login = (Button)findViewById(R.id.login);
+        register = (Button)findViewById(R.id.register);
+
         login.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
@@ -35,6 +39,14 @@ public class LoginActivity extends AppCompatActivity {
                     Toast.makeText(LoginActivity.this,"account or password is invalid",
                             Toast.LENGTH_SHORT).show();
                 }
+            }
+        });
+
+        register.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent=new Intent(LoginActivity.this,register.class);
+                startActivity(intent);
             }
         });
     }

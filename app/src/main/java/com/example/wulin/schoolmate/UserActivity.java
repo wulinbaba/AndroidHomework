@@ -56,19 +56,25 @@ public class UserActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.txt_home:
                 selected2();
                 //tabHome.setSelected(true);
-                startActivityForResult(new Intent(UserActivity.this, HomeActivity.class),1);
+                Intent intent = new Intent(UserActivity.this, HomeActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+                startActivity(intent);
                 break;
 
             case R.id.txt_post:
                 selected2();
                 //tabPost.setSelected(true);
-                startActivityForResult(new Intent(UserActivity.this, AnnounceActivity.class),1);
+                Intent intent2 = new Intent(UserActivity.this, AnnounceActivity.class);
+                intent2.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+                startActivity(intent2);
                 break;
 
             case R.id.txt_dialog:
                 selected2();
                 //tabDialog.setSelected(true);
-                startActivityForResult(new Intent(UserActivity.this, DialogActivity.class),1);
+                Intent intent3 = new Intent(UserActivity.this, DialogActivity.class);
+                intent3.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+                startActivity(intent3);
                 break;
 
             case R.id.txt_user:

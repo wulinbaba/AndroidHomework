@@ -16,12 +16,20 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".HomeActivity" />
-        <activity android:name=".DialogActivity" />
-        <activity android:name=".AnnounceActivity" />
-        <activity android:name=".PictureActivity" />
-        <activity android:name=".UserActivity" />
-        <activity android:name=".DetailActivity"></activity>
+        <activity
+            android:name=".HomeActivity"
+            android:launchMode="singleInstance"/>
+        <activity android:name=".DialogActivity"
+            android:launchMode="singleInstance"/>
+        <activity android:name=".AnnounceActivity"
+            android:launchMode="singleInstance"/>
+        <activity android:name=".PictureActivity"
+            android:launchMode="singleInstance"/>
+        <activity android:name=".UserActivity"
+            android:launchMode="singleInstance"/>
+        <activity android:name=".DetailActivity"
+            android:launchMode="singleInstance"/>
+        <activity android:name=".register"></activity>
     </application>
 
 </manifest>
